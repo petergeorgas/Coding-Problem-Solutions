@@ -20,17 +20,17 @@ Do not use flatten or otherwise clone the arrays. Some of the arrays can be empt
 
 */
 
-public class Iterator
+public class Iterator <T>
 {
-    private int[][] array;
+    private T[][] array;
     private int last = 0; // Variable to keep track of last index of the array we looked at.
     private int inner_last = 0; // Variable to keep track of the last index of the inner array we looked at 
-    public Iterator(int[][] array) 
+    public Iterator(T[][] array)
     {
         this.array = array;
     }
 
-    public Integer next() throws EmptyElementException
+    public T next() throws EmptyElementException
     {
         if(!hasNext()) // If there are no more elements
         {
